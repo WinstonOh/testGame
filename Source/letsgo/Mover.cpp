@@ -47,6 +47,7 @@ void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 	if (MovedDifference > MovedDistance) {
 		FVector MoveDirection = MoveSpeed.GetSafeNormal();
 		StartLocation = StartLocation + (MoveDirection* MovedDistance);
+		
 		GetOwner()->SetActorLocation(StartLocation);
 		MoveSpeed =-MoveSpeed;
 	}
